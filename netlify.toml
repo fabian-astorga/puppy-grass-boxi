@@ -1,62 +1,28 @@
-# netlify.toml — Netlify Frontend Deployment Configuration
-# ─────────────────────────────────────────────────────────────
-# Public frontend is deployed from `public/`
-# Backend runs separately on Render:
-#   https://puppy-grass-boxi.onrender.com
-#
-# With this config, frontend code can use relative API paths:
-#   /api/content
-#   /api/comments
-#
-# Netlify will proxy them to Render automatically.
-
 [build]
   publish = "public"
-  # No build command — this is a pure static site
 
-# ── API Proxy to Render Backend ──────────────────────────────
+# ── ADMIN redirect to Render ────────────────────────────────
+[[redirects]]
+  from = "/admin"
+  to = "https://puppy-grass-boxi.onrender.com/admin/login"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admin/*"
+  to = "https://puppy-grass-boxi.onrender.com/admin/:splat"
+  status = 301
+  force = true
+
+# ── API Proxy to Render ─────────────────────────────────────
 [[redirects]]
   from = "/api/*"
   to = "https://puppy-grass-boxi.onrender.com/api/:splat"
   status = 200
   force = true
 
-# ── SPA Routing ──────────────────────────────────────────────
+# ── SPA Routing ─────────────────────────────────────────────
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# ── Security Headers ────────────────────────────────────────
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-XSS-Protection = "1; mode=block"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://puppy-grass-boxi.onrender.com; frame-ancestors 'none'; base-uri 'self'"
-
-# ── Cache: static assets ────────────────────────────────────
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=604800"
-
-# ── No cache on HTML ────────────────────────────────────────
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
