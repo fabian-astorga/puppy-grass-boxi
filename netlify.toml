@@ -1,27 +1,33 @@
 # netlify.toml — Netlify Frontend Deployment Configuration
 # ─────────────────────────────────────────────────────────────
-# This is for deploying the PUBLIC frontend (public/) as a static site on Netlify.
-# The backend (server/) runs separately on Render.
+# Public frontend is deployed from `public/`
+# Backend runs separately on Render:
+#   https://puppy-grass-boxi.onrender.com
 #
-# SETUP:
-#   1. Deploy backend to Render first — get your Render URL
-#   2. In public/js/main.js, update API calls to use the full Render URL:
-#      fetch('https://YOUR-APP.onrender.com/api/content')
-#   3. Deploy this folder to Netlify pointing the publish dir to `public/`
+# With this config, frontend code can use relative API paths:
+#   /api/content
+#   /api/comments
+#
+# Netlify will proxy them to Render automatically.
 
 [build]
   publish = "public"
   # No build command — this is a pure static site
 
-# ── SPA Routing ───────────────────────────────────────────────
+# ── API Proxy to Render Backend ──────────────────────────────
+[[redirects]]
+  from = "/api/*"
+  to = "https://puppy-grass-boxi.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+# ── SPA Routing ──────────────────────────────────────────────
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# ── Security Headers ─────────────────────────────────────────
-# These apply to all Netlify-served responses (static files).
-# The backend on Render handles its own headers separately.
+# ── Security Headers ────────────────────────────────────────
 [[headers]]
   for = "/*"
   [headers.values]
@@ -31,9 +37,9 @@
     X-XSS-Protection = "1; mode=block"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.onrender.com; frame-ancestors 'none'; base-uri 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://puppy-grass-boxi.onrender.com; frame-ancestors 'none'; base-uri 'self'"
 
-# ── Cache: static assets ─────────────────────────────────────
+# ── Cache: static assets ────────────────────────────────────
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -49,7 +55,7 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# ── No cache on HTML ─────────────────────────────────────────
+# ── No cache on HTML ────────────────────────────────────────
 [[headers]]
   for = "/*.html"
   [headers.values]
