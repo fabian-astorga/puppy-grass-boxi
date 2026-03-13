@@ -1,0 +1,356 @@
+{
+  "SITE": {
+    "name": "Puppy Grass Boxi",
+    "tagline": "Bienestar natural para tu mascota.",
+    "logo_icon": "",
+    "wa_number": "50661166969",
+    "wa_display": "6116-6969",
+    "wa_base": "https://wa.me/50661166969",
+    "meta_title": "Puppy Grass Boxi® | Sanitario de Césped Natural para Mascotas",
+    "meta_desc": "Sanitarios de césped natural para perros y gatos. Higiénicos, ecológicos y sin olores. El bienestar de tu mascota, en casa.",
+    "meta_keywords": "sanitario cesped natural mascotas perros gatos puppy grass boxi costa rica",
+    "og_image": "/images/hero.jpg"
+  },
+  "NAV": {
+    "cta_label": "Pedir ahora",
+    "wa_message": "Hola! Me interesa Puppy Grass Boxi",
+    "links": [
+      {
+        "href": "#que-es",
+        "label": "¿Qué es?"
+      },
+      {
+        "href": "#beneficios",
+        "label": "Beneficios"
+      },
+      {
+        "href": "#tamanos",
+        "label": "Tamaños"
+      },
+      {
+        "href": "#como-funciona",
+        "label": "Cómo funciona"
+      },
+      {
+        "href": "#faq",
+        "label": "FAQ"
+      }
+    ]
+  },
+  "HERO": {
+    "badge": "100% Césped Natural",
+    "title": "Sanitarios elaborados con césped natural para <em>mascotas</em>",
+    "subtitle": "Ideal para todo tipo de mascota. Higiénico, amigable con el ambiente, sin olores y diseñado para el bienestar real de tu peludito.",
+    "cta_primary": "Pedir por WhatsApp",
+    "cta_secondary": "Ver cómo funciona",
+    "wa_message": "Hola! Quiero saber más sobre Puppy Grass Boxi",
+    "image_src": "/images/WhatsApp_Image_2026-02-06_at_5.32.39_PM_1773284194486.jpg",
+    "image_alt": "Border Collie usando el Puppy Grass Boxi de césped natural",
+    "badge_1_value": "+500",
+    "badge_1_label": "familias felices",
+    "badge_2_value": "⭐ 4.9",
+    "badge_2_label": "valoración",
+    "trust_items": [
+      "✅ Envío a domicilio",
+      "♻️ Eco-friendly",
+      "🌿 Césped 100% real"
+    ],
+    "cta_secondary_href": "#como-funciona"
+  },
+  "WHAT_IS": {
+    "badge": "Origen natural",
+    "title": "¿Qué es un PGB?",
+    "body_1": "Primer sanitario ideal para tu mascota. Elaborada con pasto 100% natural, absorbe la orina de tu mascota y elimina los malos olores dentro de tu casa, como si tu peludito estuviera en el parque.",
+    "body_2": "Cada <strong>Boxi</strong> contiene césped vivo cultivado sin pesticidas. La tierra actúa como absorbente natural de olores, exactamente como en el jardín o parque.",
+    "points": [
+      "🌱 Césped cultivado sin químicos ni pesticidas",
+      "💧 Absorbe líquidos de forma natural",
+      "🌬️ Elimina olores sin aerosoles"
+    ],
+    "image_src": "/images/photo2.jpg",
+    "image_alt": "Conejo y conejillo de indias en el Puppy Grass Boxi"
+  },
+  "BENEFITS": {
+    "badge": "Por qué elegirnos",
+    "title": "Beneficios",
+    "subtitle": "Más que un sanitario, es bienestar real para toda la familia.",
+    "items": [
+      {
+        "icon": "🌿",
+        "title": "Césped 100% Natural",
+        "desc": "Es un pedacito de parque para tu mascota. Por lo tanto, es un espacio fresco y natural, donde tu mascota puede hacer sus necesidades, descansar, comer pasto y refrescarse."
+      },
+      {
+        "icon": "🌬️",
+        "title": "Elimina Malos Olores",
+        "desc": "El pasto natural junto con la tierra o sustrato absorben la pipí de tu mascota y eliminan los malos olores dentro de casa. En caso de que hagan popó, solo debes retirar las deposiciones sólidas, como si tu peludito estuviera en el parque."
+      },
+      {
+        "icon": "❤️",
+        "title": "Bienestar Para Todos",
+        "desc": "Si debes estar fuera de casa y no puedes llevar a tu peludito de paseo, un PGB es ideal para que realice sus necesidades. Por instinto, los peluditos prefieren el césped natural para hacer sus necesidades."
+      },
+      {
+        "icon": "♻️",
+        "title": "Eco-Friendly",
+        "desc": "Producto amigable con el ambiente. Disminuyamos el uso de pads diarios. Cuida a tu mascota y al planeta al mismo tiempo."
+      },
+      {
+        "icon": "🏠",
+        "title": "Para Interior y Exterior",
+        "desc": "Ideal para colocar en balcones, patios, terrazas, apartamentos o casas. Lo más recomendable es ubicar el Boxi de tu mascota bajo techo, ya que el exceso de agua puede dañar el césped natural."
+      }
+    ]
+  },
+  "SIZES": {
+    "badge": "Encuentra el tuyo",
+    "title": "Tamaños y Presentaciones",
+    "subtitle": "Desde razas pequeñas hasta las más grandes, tenemos el Boxi perfecto.",
+    "cta_advice": "Te asesoramos gratis por WhatsApp",
+    "wa_message": "Hola! Necesito ayuda para elegir el tamaño correcto para mi mascota",
+    "items": [
+      {
+        "name": "Clásica",
+        "desc": "Ideal para mascotas pequeñas. Caben cómodamente en cualquier espacio del hogar.",
+        "dimensions": "65 × 45 cm",
+        "weight": "Hasta 10 kg",
+        "duration": "3–4 semanas",
+        "price": "₡12,700",
+        "featured": false,
+        "ribbon": null,
+        "illustration": "/images/size_clasica.png",
+        "image_src": "",
+        "spare": {
+          "enabled": false,
+          "title": "",
+          "desc": "",
+          "price": ""
+        }
+      },
+      {
+        "name": "Premium",
+        "desc": "El favorito de la familia. Perfecto para razas medianas o múltiples mascotas.",
+        "dimensions": "72 × 48 cm",
+        "weight": "10–25 kg",
+        "duration": "3–4 semanas",
+        "price": "₡27,500",
+        "featured": true,
+        "ribbon": "⭐ Más popular",
+        "illustration": "/images/size_premium.png",
+        "image_src": "",
+        "spare": {
+          "enabled": true,
+          "title": "Repuesto Premium",
+          "desc": "Repuesto de césped natural listo para colocar en tu marco existente.",
+          "price": "₡18,500"
+        }
+      },
+      {
+        "name": "Premium Plus",
+        "desc": "Diseñado para razas grandes. Amplio espacio y mayor absorción para máxima higiene.",
+        "dimensions": "102 × 68 cm",
+        "weight": "+25 kg",
+        "duration": "2–3 semanas",
+        "price": "₡37,500",
+        "featured": false,
+        "ribbon": null,
+        "illustration": "/images/size_premium_plus.png",
+        "image_src": "",
+        "spare": {
+          "enabled": true,
+          "title": "Repuesto Premium Plus",
+          "desc": "Repuesto de mayor tamaño, listo para instalar en tu marco.",
+          "price": "₡24,900"
+        }
+      }
+    ]
+  },
+  "HOW_IT_WORKS": {
+    "badge": "Simple y natural",
+    "title": "¿Cómo funciona?",
+    "subtitle": "Sin complicaciones. Tu mascota lo reconoce desde el primer día.",
+    "steps": [
+      {
+        "number": "01",
+        "icon": "📦",
+        "title": "Recibes tu Boxi",
+        "desc": "Lo entregamos en tu puerta, fresco y listo para usar. Sin instalación complicada."
+      },
+      {
+        "number": "02",
+        "icon": "📍",
+        "title": "Colócalo en su lugar",
+        "desc": "Ponlo donde quieres que tu mascota lo use. Cerca de la puerta o en el balcón."
+      },
+      {
+        "number": "03",
+        "icon": "🐾",
+        "title": "Tu mascota lo reconoce",
+        "desc": "El instinto natural hace todo el trabajo. El olor del césped real la atrae de inmediato."
+      },
+      {
+        "number": "04",
+        "icon": "🔄",
+        "title": "Reemplázalo al mes",
+        "desc": "Cuando el césped cambie, pide uno fresco. Tenemos plan mensual para que nunca te falte."
+      }
+    ]
+  },
+  "DURABILITY": {
+    "badge": "Duración real",
+    "title": "¿Cuánto dura mi Boxi?",
+    "body_1": "Cada Puppy Grass Boxi está diseñado para durar entre <strong>2 a 4 semanas</strong> dependiendo del tamaño de tu mascota y la frecuencia de uso.",
+    "body_2": "Cuando notes que el césped cambia de color o el olor se intensifica, es momento de reemplazarlo. Contamos con <strong>planes de suscripción mensual</strong> para que nunca te quedes sin tu Boxi.",
+    "points": [],
+    "cta_label": "Ver plan de suscripción",
+    "wa_message": "Hola! Me interesa el plan de suscripción mensual de Puppy Grass Boxi",
+    "timeline": [
+      {
+        "label": "Semana 1",
+        "desc": "Césped fresco, olor mínimo. Tu mascota lo adopta.",
+        "active": true
+      },
+      {
+        "label": "Semana 2",
+        "desc": "Plena funcionalidad y absorción óptima.",
+        "active": true
+      },
+      {
+        "label": "Semana 3",
+        "desc": "Funcionamiento estable. Observa el color.",
+        "active": false
+      },
+      {
+        "label": "Semana 4",
+        "desc": "Momento ideal de reemplazo para máxima higiene.",
+        "active": false
+      }
+    ]
+  },
+  "TESTIMONIALS": {
+    "badge": "Ellos ya lo probaron",
+    "title": "Lo que dicen nuestras familias",
+    "subtitle": "+500 mascotas felices y sus familias también.",
+    "items": [
+      {
+        "name": "María González",
+        "pet": "Mamá de Luna, Poodle Toy",
+        "stars": 5,
+        "avatar": "👩",
+        "quote": "Increíble. Luna lo usó desde el primer día sin entrenamiento especial. El olor a pasto la atrajo de inmediato. Mi apartamento huele limpio y ella está feliz."
+      },
+      {
+        "name": "Carlos Rodríguez",
+        "pet": "Papá de Max, Labrador",
+        "stars": 5,
+        "avatar": "👨",
+        "quote": "Tenía miedo que el Maxi no fuera suficiente para Max, pero es perfecto. Nada que ver con los sanitarios de plástico que usábamos antes. Este es el real."
+      },
+      {
+        "name": "Andrea Mora",
+        "pet": "Mamá de Kiki y Mochi, Gatos",
+        "stars": 5,
+        "avatar": "👩‍🦱",
+        "quote": "Mis gatos son muy selectivos pero ambos adoptaron el Boxi sin problemas. Y el olor... prácticamente no existe. Maravilloso."
+      },
+      {
+        "name": "Felipe Torres",
+        "pet": "Papá de Biscuit, Beagle",
+        "stars": 5,
+        "avatar": "🧑",
+        "quote": "4 meses con el plan mensual y no lo cambiaría. Biscuit ya no tiene accidentes en casa y la atención por WhatsApp es súper rápida."
+      },
+      {
+        "name": "Valeria Jiménez",
+        "pet": "Mamá de Coco, Schnauzer",
+        "stars": 5,
+        "avatar": "👱‍♀️",
+        "quote": "Vivimos en un décimo piso y pasear a Coco era un problema. El Boxi cambió nuestra vida. Es como tener un jardín en el apartamento."
+      },
+      {
+        "name": "Diego Calvo",
+        "pet": "Papá de Thor, Pastor Alemán",
+        "stars": 5,
+        "avatar": "🧔",
+        "quote": "Era escéptico, pero Thor lo adoptó en horas. El césped real hace toda la diferencia. 100% recomendado."
+      }
+    ]
+  },
+  "FAQ": {
+    "badge": "Resolvemos tus dudas",
+    "title": "Preguntas frecuentes",
+    "cta_label": "Escríbenos por WhatsApp",
+    "wa_message": "Hola! Tengo una consulta sobre Puppy Grass Boxi",
+    "items": [
+      {
+        "question": "¿Es seguro para mi mascota?",
+        "answer": "Sí, completamente. El césped se cultiva sin pesticidas, herbicidas ni fertilizantes químicos. Es seguro incluso si tu mascota lo mordisquea."
+      },
+      {
+        "question": "¿Cómo entreno a mi mascota para usarlo?",
+        "answer": "La mayoría no necesita entrenamiento. El olor del césped activa su instinto. Colócalo donde suelen tener accidentes. Por WhatsApp te guiamos paso a paso."
+      },
+      {
+        "question": "¿Cada cuánto hay que cambiarlo?",
+        "answer": "De 2 a 4 semanas según el tamaño y frecuencia de uso. Cuando el césped se pone amarillo o el olor se intensifica, es momento de cambiarlo."
+      },
+      {
+        "question": "¿Funciona para gatos también?",
+        "answer": "Sí. El césped natural llama su atención naturalmente. Muchos gatos lo adoptan sin problema. Escríbenos y te damos consejos específicos."
+      },
+      {
+        "question": "¿Tienen envío a domicilio?",
+        "answer": "Sí, entregamos a domicilio. Contáctanos al 6116-6969 para consultar cobertura y horarios en tu zona."
+      },
+      {
+        "question": "¿Qué hago cuando hay que desecharlo?",
+        "answer": "Al ser biodegradable, puedes compostarlo en tu jardín o desecharlo como residuo orgánico. No genera basura plástica."
+      }
+    ]
+  },
+  "CTA": {
+    "icon": "🐾",
+    "title": "Tu mascota lo merece hoy",
+    "subtitle": "Dale el bienestar natural que necesita. Pedidos con envío a domicilio.",
+    "emphasis": "Escríbenos y te asesoramos sin compromiso.",
+    "cta_label": "Pedir por WhatsApp · 6116-6969",
+    "wa_message": "Hola! Quiero pedir mi Puppy Grass Boxi",
+    "note": "Atención de lunes a sábado · Respuesta en minutos"
+  },
+  "FOOTER": {
+    "copyright": "© 2025 Puppy Grass Boxi®. Todos los derechos reservados.",
+    "wa_label": "💬 6116-6969",
+    "nav_links": [
+      {
+        "label": "¿Qué es?",
+        "href": "#que-es"
+      },
+      {
+        "label": "Beneficios",
+        "href": "#beneficios"
+      },
+      {
+        "label": "Tamaños",
+        "href": "#tamanos"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "#como-funciona"
+      },
+      {
+        "label": "FAQ",
+        "href": "#faq"
+      }
+    ]
+  },
+  "COMMENTS": {
+    "badge": "Tu opinión nos importa",
+    "title": "Déjanos un comentario",
+    "subtitle": "¿Tienes preguntas, sugerencias o simplemente quieres contarnos tu experiencia? Escríbenos.",
+    "placeholder_comment": "¿Cómo fue tu experiencia con Puppy Grass Boxi?",
+    "placeholder_name": "Tu nombre (opcional)",
+    "btn_label": "Enviar comentario",
+    "success_msg": "¡Gracias! Tu comentario fue enviado correctamente.",
+    "error_msg": "Ocurrió un error. Por favor intenta de nuevo."
+  }
+}

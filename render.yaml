@@ -1,0 +1,48 @@
+# render.yaml — Render.com Deployment Configuration
+# ─────────────────────────────────────────────────────────────
+# Deploy with: connect this repo to Render and it auto-detects this file.
+#
+# BEFORE DEPLOYING set these environment variables in the Render dashboard:
+#   JWT_SECRET      — run `npm run generate-secret` locally to generate
+#   ADMIN_PASSWORD  — set a strong password, then delete this var after `npm run setup`
+#   ALLOWED_ORIGINS — your Netlify URL, e.g. https://puppygrassboxi.netlify.app
+#   NODE_ENV        — production
+
+services:
+  - type: web
+    name: puppy-grass-boxi-api
+    runtime: node
+    plan: free       # upgrade to starter for persistent disk (see note below)
+    buildCommand: npm install --omit=dev && node server/setup.js
+    startCommand: npm start
+    healthCheckPath: /api/content
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000        # Render assigns this automatically, but declare it explicitly
+      - key: JWT_SECRET
+        generateValue: true # Render auto-generates a secure random value
+      - key: ADMIN_PASSWORD
+        sync: false         # Must be set manually in dashboard (sensitive)
+      - key: ALLOWED_ORIGINS
+        sync: false         # Set to your Netlify URL in dashboard
+
+# ─────────────────────────────────────────────────────────────
+# IMPORTANT NOTE ON JSON FILE PERSISTENCE:
+#
+# Render's free tier does NOT have persistent disk storage.
+# The server/data/ JSON files will reset on every deploy/restart.
+#
+# Options:
+#   1. Upgrade to Render Starter ($7/mo) and add a Disk mount:
+#      - mountPath: /app/server/data
+#      - sizeGB: 1
+#
+#   2. Migrate to a free database (PlanetScale, Supabase, MongoDB Atlas)
+#      and replace file-based reads/writes with DB calls.
+#
+#   3. For a small production site: deploy content.json as part of
+#      the repo (already gitignored — remove server/data/*.json from .gitignore)
+#      and accept that comments reset on redeploy.
+# ─────────────────────────────────────────────────────────────

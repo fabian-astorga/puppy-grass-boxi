@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin — Puppy Grass Boxi</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/admin/css/admin.css" />
+</head>
+<body class="admin-page">
+
+  <!-- ── Sidebar ──────────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar" aria-label="Menú de secciones">
+    <div class="sidebar__header">
+      <span class="sidebar__logo">🌿</span>
+      <div>
+        <div class="sidebar__brand">Puppy Grass Boxi</div>
+        <div class="sidebar__role">Panel Admin</div>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav" aria-label="Secciones del sitio">
+      <button class="nav-item active" data-section="SITE"         aria-selected="true">⚙️ Configuración</button>
+      <button class="nav-item"        data-section="NAV"                               >🧭 Navegación</button>
+      <button class="nav-item"        data-section="HERO"                              >🦸 Hero</button>
+      <button class="nav-item"        data-section="WHAT_IS"                           >🌱 ¿Qué es?</button>
+      <button class="nav-item"        data-section="BENEFITS"                          >✅ Beneficios</button>
+      <button class="nav-item"        data-section="SIZES"                             >📦 Tamaños</button>
+      <button class="nav-item"        data-section="HOW_IT_WORKS"                      >🔄 Cómo funciona</button>
+      <button class="nav-item"        data-section="DURABILITY"                        >⏱️ Durabilidad</button>
+      <button class="nav-item"        data-section="TESTIMONIALS"                      >⭐ Testimonios</button>
+      <button class="nav-item"        data-section="FAQ"                               >❓ FAQ</button>
+      <button class="nav-item"        data-section="CTA"                               >📢 CTA Final</button>
+      <button class="nav-item"        data-section="FOOTER"                            >🔗 Footer</button>
+      <button class="nav-item"        data-section="COMMENTS"                          >📨 Comentarios</button>
+    </nav>
+
+    <div class="sidebar__footer">
+      <a href="/" target="_blank" class="sidebar__view-site">👁️ Ver sitio</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="theme-toggle__icon" id="themeIcon">🌙</span>
+        <span id="themeLabel">Modo oscuro</span>
+      </button>
+      <button class="sidebar__logout" id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <!-- ── Main Content ─────────────────────────────────────── -->
+  <div class="admin-main">
+
+    <!-- Top bar -->
+    <header class="admin-topbar">
+      <h2 class="admin-topbar__title" id="sectionTitle">Configuración</h2>
+      <div class="admin-topbar__actions">
+        <span class="save-status" id="saveStatus"></span>
+        <button class="btn btn--primary" id="saveBtn" disabled>
+          Guardar cambios
+        </button>
+      </div>
+    </header>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <!-- Editor area -->
+    <div class="admin-editor" id="editorArea">
+      <div class="editor-loading" id="editorLoading">
+        <span>⏳ Cargando contenido...</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/admin/js/api.js"></script>
+  <script src="/admin/js/fieldBuilders.js"></script>
+  <script src="/admin/js/sectionEditors.js"></script>
+  <script src="/admin/js/admin.js"></script>
+</body>
+</html>

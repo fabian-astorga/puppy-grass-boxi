@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puppy Grass Boxi</title>
+  <meta name="description" content="" />
+  <meta name="robots" content="index, follow" />
+  <!-- Anti-FOUC: apply saved theme before first paint -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('pgb_theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner" id="top">
+    <div class="container navbar__inner">
+      <a href="#top" class="navbar__logo" aria-label="Puppy Grass Boxi - Inicio">
+        <img src="/images/logo.png" alt="Puppy Grass Boxi" class="navbar__logo-img" style="height:52px;width:auto;" />
+      </a>
+      <nav class="navbar__links" role="navigation" aria-label="Menú principal">
+        <ul id="nav-links" style="display:flex;align-items:center;gap:.25rem;list-style:none;padding:0;margin:0;"></ul>
+      </nav>
+      <a href="#" id="nav-cta" class="btn btn--primary btn--sm navbar__cta" target="_blank" rel="noopener noreferrer">Pedir ahora</a>
+      <button class="theme-toggle-btn" aria-label="Cambiar tema" aria-pressed="false">🌙</button>
+      <button class="navbar__hamburger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil" hidden>
+      <div id="mobile-nav-links"></div>
+      <div style="display:flex;gap:.75rem;align-items:center;padding:.25rem 0;">
+        <button class="theme-toggle-btn" aria-label="Cambiar tema" aria-pressed="false">🌙</button>
+        <span style="font-size:.875rem;font-weight:600;color:var(--color-text-muted);">Cambiar tema</span>
+      </div>
+      <a href="#" id="mobile-wa-btn" class="btn btn--primary" target="_blank" rel="noopener noreferrer">💬 Pedir por WhatsApp</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge badge--accent" id="hero-badge"></span>
+          <h1 id="hero-title" class="hero__title"></h1>
+          <p class="hero__subtitle" id="hero-subtitle"></p>
+          <div class="hero__actions">
+            <a href="#" id="hero-cta-primary" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer"></a>
+            <a href="#" id="hero-cta-secondary" class="btn btn--outline btn--lg"></a>
+          </div>
+          <div class="hero__trust" id="hero-trust"></div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__image-wrap">
+            <img id="hero-img" src="" alt="" width="600" height="450" loading="eager" class="hero__img" />
+            <div class="hero__badge-float hero__badge-float--1">
+              <strong id="hero-badge-1-value"></strong>
+              <span id="hero-badge-1-label"></span>
+            </div>
+            <div class="hero__badge-float hero__badge-float--2">
+              <strong id="hero-badge-2-value"></strong>
+              <span id="hero-badge-2-label"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="var(--color-bg-alt)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- QUÉ ES -->
+    <section class="section what-is" id="que-es" aria-labelledby="whatis-title">
+      <div class="container">
+        <div class="what-is__grid">
+          <div class="what-is__text" data-animate>
+            <span class="badge badge--primary" id="whatis-badge"></span>
+            <h2 id="whatis-title" class="section-title" style="text-align:left;margin-top:.75rem;"></h2>
+            <p class="what-is__body" id="whatis-body-1"></p>
+            <p class="what-is__body" id="whatis-body-2"></p>
+            <ul class="what-is__list" id="whatis-points"></ul>
+          </div>
+          <div class="what-is__visual" data-animate>
+            <img id="whatis-img" src="" alt="" width="520" height="390" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section benefits" id="beneficios" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="badge badge--primary" id="benefits-badge"></span>
+          <h2 id="benefits-title" class="section-title"></h2>
+          <p class="section-subtitle" id="benefits-subtitle"></p>
+        </div>
+        <div class="benefits__grid" id="benefitsGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- TAMAÑOS -->
+    <section class="section sizes" id="tamanos" aria-labelledby="sizes-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="badge badge--accent" id="sizes-badge"></span>
+          <h2 id="sizes-title" class="section-title"></h2>
+          <p class="section-subtitle" id="sizes-subtitle"></p>
+        </div>
+        <div class="sizes__grid" id="sizesGrid" role="list"></div>
+        <div class="sizes__cta" data-animate>
+          <p>¿No sabes cuál elegir? <a href="#" id="sizes-advice-link" target="_blank" rel="noopener noreferrer" class="link-accent"></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section how-it-works bg-alt" id="como-funciona" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="badge badge--primary" id="how-badge"></span>
+          <h2 id="how-title" class="section-title"></h2>
+          <p class="section-subtitle" id="how-subtitle"></p>
+        </div>
+        <div class="steps" id="stepsGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- DURABILIDAD -->
+    <section class="section durability" id="durabilidad" aria-labelledby="durability-title">
+      <div class="container">
+        <div class="durability__inner">
+          <div class="durability__content" data-animate>
+            <span class="badge badge--accent" id="durability-badge"></span>
+            <h2 id="durability-title" class="section-title" style="text-align:left;margin-top:.75rem;"></h2>
+            <p class="durability__body" id="durability-body-1"></p>
+            <p class="durability__body" id="durability-body-2"></p>
+            <a href="#" id="durability-cta" class="btn btn--primary" target="_blank" rel="noopener noreferrer"></a>
+          </div>
+          <div class="durability__visual" data-animate>
+            <div class="timeline" id="durabilityTimeline" role="list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section testimonials bg-alt" id="testimonios" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="badge badge--accent" id="testimonials-badge"></span>
+          <h2 id="testimonials-title" class="section-title"></h2>
+          <p class="section-subtitle" id="testimonials-subtitle"></p>
+        </div>
+        <div class="testimonials__carousel" id="testimonialsCarousel" role="region" aria-label="Testimonios" tabindex="0">
+          <div class="testimonials__track" id="testimonialsTrack"></div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" id="prevTestimonial" aria-label="Anterior">‹</button>
+            <div class="carousel__dots" id="testimonialDots" role="tablist"></div>
+            <button class="carousel__btn" id="nextTestimonial" aria-label="Siguiente">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__container">
+        <div class="section-header" data-animate>
+          <span class="badge badge--primary" id="faq-badge"></span>
+          <h2 id="faq-title" class="section-title"></h2>
+        </div>
+        <div class="faq__list" id="faqList" role="list"></div>
+        <div class="faq__footer" data-animate>
+          <p>¿Tienes otra pregunta?</p>
+          <a href="#" id="faq-cta" class="btn btn--outline" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section cta-final" id="pedir" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-final__inner">
+          <span class="cta-final__icon" id="cta-icon" aria-hidden="true"></span>
+          <h2 id="cta-title" class="cta-final__title"></h2>
+          <p class="cta-final__subtitle">
+            <span id="cta-subtitle"></span><br/>
+            <strong id="cta-emphasis" style="color:rgba(255,255,255,.9)"></strong>
+          </p>
+          <a href="#" id="cta-btn" class="btn btn--white btn--lg" target="_blank" rel="noopener noreferrer"></a>
+          <p class="cta-final__note" id="cta-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMENTARIOS -->
+    <section class="section comments" id="comentarios" aria-labelledby="comments-title">
+      <div class="container comments__container">
+        <div class="section-header" data-animate>
+          <span class="badge badge--accent" id="comments-badge"></span>
+          <h2 id="comments-title" class="section-title"></h2>
+          <p class="section-subtitle" id="comments-subtitle"></p>
+        </div>
+        <div class="comments__form-wrap" data-animate>
+          <form id="comments-form" class="comments-form" novalidate>
+            <div class="comments-form__field">
+              <label for="comments-textarea" class="sr-only">Comentario</label>
+              <textarea
+                id="comments-textarea"
+                class="comments-form__textarea"
+                rows="4"
+                maxlength="1000"
+                required
+              ></textarea>
+              <span class="comments-form__char" id="comments-char">0/1000</span>
+            </div>
+            <div class="comments-form__field">
+              <label for="comments-name" class="sr-only">Nombre</label>
+              <input
+                id="comments-name"
+                type="text"
+                class="comments-form__input"
+                maxlength="80"
+                autocomplete="name"
+              />
+            </div>
+            <button type="submit" id="comments-submit" class="btn btn--primary comments-form__btn"></button>
+            <div id="comments-feedback" class="comments-feedback" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER COMPACTO -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo-link" aria-label="Puppy Grass Boxi">
+        <img src="/images/logo.png" alt="Puppy Grass Boxi" class="footer__logo" />
+      </a>
+      <nav class="footer__nav" id="footer-nav-links" aria-label="Navegación footer"></nav>
+      <div class="footer__right">
+        <a href="#" id="footer-wa" class="footer__wa" target="_blank" rel="noopener noreferrer"></a>
+        <p class="footer__copy" id="footer-copyright"></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="#" id="wa-float" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="js/components.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

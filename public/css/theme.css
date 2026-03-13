@@ -1,0 +1,105 @@
+/* ══════════════════════════════════════════════════════════════
+   PUPPY GRASS BOXI — Design System
+   Brand: Navy #1D3470 · Orange #E07020 · Cream #F5EDE0
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Brand palette */
+  --navy:        #1D3470;
+  --navy-dark:   #152858;
+  --navy-light:  #2E4F9E;
+  --orange:      #E07020;
+  --orange-dark: #C05E10;
+  --orange-light:#F08030;
+  --cream:       #F5EDE0;
+  --cream-dark:  #EDE0CE;
+  --cream-light: #FAF5EE;
+
+  /* Semantic tokens */
+  --color-bg:          var(--cream-light);
+  --color-bg-alt:      var(--cream);
+  --color-surface:     #FFFFFF;
+  --color-surface-2:   var(--cream-light);
+  --color-primary:     var(--navy);
+  --color-primary-soft:#EEF1F9;
+  --color-accent:      var(--orange);
+  --color-accent-soft: #FDF3EB;
+  --color-text:        #1A1A2E;
+  --color-text-muted:  #5A6080;
+  --color-text-light:  #8892B0;
+  --color-border:      #E4D8C8;
+  --color-border-soft: #F0E8D8;
+  --color-whatsapp:    #25D366;
+
+  /* Typography */
+  --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-body:    'Plus Jakarta Sans', 'Nunito', system-ui, sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  2rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Radii */
+  --r-sm:  6px;
+  --r-md:  12px;
+  --r-lg:  20px;
+  --r-xl:  32px;
+  --r-pill:999px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 8px rgba(29,52,112,.08);
+  --shadow-md:  0 4px 20px rgba(29,52,112,.12);
+  --shadow-lg:  0 8px 40px rgba(29,52,112,.16);
+  --shadow-card:0 2px 16px rgba(29,52,112,.10), 0 1px 4px rgba(29,52,112,.06);
+
+  /* Transitions */
+  --t-fast: 150ms ease;
+  --t-med:  300ms ease;
+  --t-slow: 500ms ease;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --color-bg:          #0E1420;
+  --color-bg-alt:      #141B2D;
+  --color-surface:     #1A2238;
+  --color-surface-2:   #1E2840;
+  --color-primary:     #7B9FE8;
+  --color-primary-soft:#1A2238;
+  --color-accent:      #F08C40;
+  --color-accent-soft: #2A1E10;
+  --color-text:        #EEF2FF;
+  --color-text-muted:  #9AAAC8;
+  --color-text-light:  #6878A0;
+  --color-border:      #2A3550;
+  --color-border-soft: #1E2840;
+}
+
+/* Dark mode hero wave color */
+[data-theme="dark"] .hero__wave path { fill: #141B2D; }
+
+/* Theme toggle */
+.theme-toggle-btn {
+  background: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--r-pill);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--t-fast), border-color var(--t-fast);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+.theme-toggle-btn:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
