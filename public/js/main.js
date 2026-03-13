@@ -5,7 +5,7 @@
 
 async function fetchContent() {
   try {
-    const res = await fetch('/api/content');
+    const res = await fetch('https://puppy-grass-boxi.onrender.com/api/content');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
@@ -65,7 +65,7 @@ function initCommentsForm() {
     feedback.hidden = true;
 
     try {
-      const res = await fetch('/api/comments', {
+      const res = await fetch('https://puppy-grass-boxi.onrender.com/api/comments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
